@@ -1,0 +1,345 @@
+ADMIN - PROGRAMS
+===============================================
+php artisan
+crud:generate Programs
+--fields="nama:string:required, biaya:bigint:required, lama_belajar:text, deskripsi:text, mata_pelajaran:varchar"
+--route=yes
+--pk=id
+--view-path="backend"
+--namespace=Backend
+--route-group=admin
+
+php artisan crud:generate Programs --fields="nama:string:required, biaya:bigint:required, lama_belajar:text, deskripsi:text, mata_pelajaran:varchar" --route=yes --pk=id --view-path="backend/programs" --namespace=Backend --route-group=admin
+
+
+ADMIN - MENU ITEMS
+================================================
+php artisan
+crud:migration menu_items
+--schema="nama:string, url:string, fa_icon:string, urutan:smallint, menu_id:string, parent_id:smallint"
+
+php artisan crud:migration menu_items --schema="nama:string, url:string, fa_icon:string, urutan:smallint, menu_id:string, parent_id:smallint"
+
+
+ADMIN - PROGRAM CLASSES
+================================================
+php artisan
+crud:generate ProgramClasses
+--fields="kode:string:required, nama:string:required, hari:string:required, jam_masuk:timestamp:required, jam_keluar:timestamp:required, kapasitas:integer, program_id:integer:required"
+--route=yes
+--pk=id
+--view-path="backend"
+--namespace=Backend
+--route-group=admin
+
+php artisan crud:generate ProgramClasses --fields="kode:string:required, nama:string:required, hari:string:required, jam_masuk:timestamp:required, jam_keluar:timestamp:required, kapasitas:integer, program_id:integer:required" --route=yes --pk=id --view-path="backend" --namespace=Backend --route-group=admin
+
+
+
+ADMIN - STUDENTS
+================================================
+php artisan
+crud:generate Students
+--fields="nama_ortu:string:required, tempat_lahir:string:required, tgl_lahir:timestamp:required, alamat:text:required, no_hp:string:required, asal_sekolah:string:required, email:string:required, status:string:required, user_id:integer, program_class_id:integer"
+--route=yes
+--pk=id
+--view-path="backend"
+--namespace=Backend
+--route-group=admin
+
+php artisan crud:generate Students --fields="nama_ortu:string:required, tempat_lahir:string:required, tgl_lahir:timestamp:required, alamat:text:required, no_hp:string:required, asal_sekolah:string:required, email:string:required, status:string:required, user_id:integer, program_class_id:integer" --route=yes --pk=id --view-path="backend" --namespace=Backend --route-group=admin
+
+
+
+ADMIN - REGISTRANTS
+================================================
+php artisan
+crud:generate Registrants
+--fields="nama_lengkap:string:required, nama_ortu:string:required, tempat_lahir:string:required, tgl_lahir:timestamp:required, alamat:text:required, no_hp:string:required, asal_sekolah:string:required, email:string:required, status:string:required, program_id:integer:required"
+--route=yes
+--pk=id
+--view-path="backend"
+--namespace=Backend
+--route-group=admin
+
+php artisan crud:generate Registrants --fields="nama_lengkap:string:required, nama_ortu:string:required, tempat_lahir:string:required, tgl_lahir:timestamp:required, alamat:text:required, no_hp:string:required, asal_sekolah:string:required, email:string:required, status:string:required, program_id:integer:required" --route=yes --pk=id --view-path="backend" --namespace=Backend --route-group=admin
+
+
+
+ADMIN - PAGES
+================================================
+php artisan
+crud:generate Pages
+--fields="nama:string:required, konten:text:required"
+--route=yes
+--pk=id
+--view-path="backend"
+--namespace=Backend
+--route-group=admin
+
+php artisan crud:generate Pages --fields="nama:string:required, konten:text:required" --route=yes --pk=id --view-path="backend" --namespace=Backend --route-group=admin
+
+
+
+
+ADMIN - USER
+================================================
+php artisan
+crud:generate Users
+--fields="name:string:required, email:string:required, password:string:required, role_id:string:required, konten:text:required"
+--route=yes
+--pk=id
+--view-path="backend"
+--namespace=Backend
+--route-group=admin
+
+php artisan crud:generate Users --fields="name:string:required, email:string:required, password:string:required, role_id:string:required, konten:text:required" --route=yes --pk=id --view-path="backend" --namespace=Backend --route-group=admin
+
+
+
+ADMIN - SCORE
+================================================
+php artisan
+crud:generate Scores
+--fields="matematika:double, bahasa_indonesia:double, ipa:double, bahasa_inggris:double, fisika:double, kimia:double, biologi:double, geografi:double, ekonomi:double, sosiologi:double, student_id:integer"
+--route=yes
+--pk=id
+--view-path="backend"
+--namespace=Backend
+--route-group=admin
+
+php artisan crud:generate Scores --fields="matematika:double, bahasa_indonesia:double, ipa:double, bahasa_inggris:double, fisika:double, kimia:double, biologi:double, geografi:double, ekonomi:double, sosiologi:double, student_id:integer" --route=yes --pk=id --view-path="backend" --namespace=Backend --route-group=admin
+
+
+
+ADMIN - BANNER ITEMS
+================================================
+php artisan
+crud:generate BannerItems
+--fields="nama:string:required, url_image:string:required, urutan:integer"
+--route=yes
+--pk=id
+--view-path="backend"
+--namespace=Backend
+--route-group=admin
+
+php artisan crud:generate BannerItems --fields="nama:string:required, url_image:string:required, urutan:integer" --route=yes --pk=id --view-path="backend" --namespace=Backend --route-group=admin
+
+
+
+ADMIN - TRYOUTS
+================================================
+php artisan
+crud:generate Tryouts
+--fields="tgl_tryout:date:required, nama:string:required, program_id:integer"
+--route=yes
+--pk=id
+--view-path="backend"
+--namespace=Backend
+--route-group=admin
+
+php artisan crud:generate Tryouts --fields="tgl_tryout:date:required, nama:string:required, program_id:integer" --route=yes --pk=id --view-path="backend" --namespace=Backend --route-group=admin
+
+
+
+ADMIN - ATTEDANCES
+================================================
+php artisan
+crud:generate Attedances
+--fields="tanggal#date#required, is_hadir#tinyint#required, program_class_id#integer#required, student_id#integer#required"
+--route=yes
+--pk=id
+--view-path="backend"
+--namespace=Backend
+--route-group=admin
+
+php artisan crud:generate Attedances --fields="tanggal#date#required, is_hadir#tinyint#required, program_class_id#integer#required, student_id#integer#required" --route=yes --pk=id --view-path="backend" --namespace=Backend --route-group=admin
+
+
+
+ADMIN - STUDENT ATTEDANCES
+================================================
+php artisan crud:migration student_attedances --schema="is_hadir#tinyint#required, student_id#integer#required, attedance_id#integer#required"
+
+php artisan crud:model StudentAttedance --fillable="['is_hadir', 'student_id', 'attedance_id']"
+
+
+
+
+
+
+
+
+FRONTEND - PAGES
+================================================
+php artisan crud:controller PagesController --crud-name=pages --model-name=Page --view-path="frontend"
+
+
+
+FRONTEND - STUDENTS
+================================================
+php artisan crud:controller StudentsController --crud-name=students --model-name=Student --view-path="frontend"
+
+
+
+
+FRONTEND - REGISTRANTS
+================================================
+php artisan crud:controller RegistrantsController --crud-name=registrants --model-name=Registrant --view-path="frontend"
+
+
+
+
+ADMIN - TEACHERS
+================================================
+php artisan crud:generate Teachers --fields="nama#string#required, gelar#string#required, mata_pelajaran#string#required" --route=yes --pk=id --view-path="backend" --namespace=Backend --route-group=admin
+
+
+ADMIN - SCHEDULES
+================================================
+php artisan crud:generate Schedules --fields="hari#string#required, teacher_id#integer#required, program_class_id#integer#required" --route=yes --pk=id --view-path="backend" --namespace=Backend --route-group=admin
+
+
+ADMIN - DEADLINES
+================================================
+php artisan crud:generate Deadlines --fields="nama#string#required, tanggal_buka#date#required, tangal_tutup#date#required" --route=yes --pk=id --view-path="backend" --namespace=Backend --route-group=admin
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+FRONTEND - Units
+================================================
+php artisan
+crud:generate Units
+--fields="nama#string#required, alamat#text#required, no_telepon#string#required, website#string, media_sosial#string"
+--route=yes
+--pk=id
+--view-path="backend"
+--namespace=Backend
+--route-group=admin
+
+
+FRONTEND - Units
+================================================
+php artisan
+crud:generate Profiles
+--fields="nama#string#required, alamat#text, email#string#, content#text, jabatan#string#required"
+--route=yes
+--pk=id
+--view-path="backend"
+--namespace=Backend
+--route-group=admin
+
+php artisan crud:generate Profiles --fields="nama#string#required, alamat#text, email#string#, content#text, jabatan#string#required" --route=yes --pk=id --view-path="backend" --namespace=Backend --route-group=admin
+
+
+FRONTEND - Agendas
+================================================
+php artisan
+crud:generate Agendas
+--fields="nama#string#required, tanggal#date#required, content#text#required"
+--route=yes
+--pk=id
+--view-path="backend"
+--namespace=Backend
+--route-group=admin
+
+php artisan crud:generate Agendas --fields="nama#string#required, tanggal#date#required, content#text#required" --route=yes --pk=id --view-path="backend" --namespace=Backend --route-group=admin
+
+
+FRONTEND - Articles
+================================================
+php artisan
+crud:generate Articles
+--fields="judul#string#required, content#text#required"
+--route=yes
+--pk=id
+--view-path="backend"
+--namespace=Backend
+--route-group=admin
+
+php artisan crud:generate Articles --fields="judul#string#required, content#text#required" --route=yes --pk=id --view-path="backend" --namespace=Backend --route-group=admin
+
+
+FRONTEND - Districts
+================================================
+php artisan
+crud:generate Districts
+--fields="nama#string#required, alamat#text#required, telepon#string#erquired, website#string, camat#string#required"
+--route=yes
+--pk=id
+--view-path="backend"
+--namespace=Backend
+--route-group=admin
+
+php artisan crud:generate Districts --fields="nama#string#required, alamat#text#required, telepon#string#erquired, website#string, camat#string#required" --route=yes --pk=id --view-path="backend" --namespace=Backend --route-group=admin
+
+
+
+FRONTEND - Complaints
+================================================
+php artisan
+crud:generate Complaints
+--fields="nama#string#required, email#string#required, kategori#string#required, pesan#text#required"
+--route=yes
+--pk=id
+--view-path="backend"
+--namespace=Backend
+--route-group=admin
+
+php artisan crud:generate Complaints --fields="nama#string#required, email#string#required, kategori#string#required, pesan#text#required" --route=yes --pk=id --view-path="backend" --namespace=Backend --route-group=admin
+
+
+
+
+FRONTEND - Places
+================================================
+php artisan
+crud:generate Places
+--fields="nama#string#required, daerah#string#required, alamat#text#required, gambar#string#required"
+--route=yes
+--pk=id
+--view-path="backend"
+--namespace=Backend
+--route-group=admin
+
+php artisan crud:generate Places --fields="nama#string#required, daerah#string#required, alamat#text#required, gambar#string#required" --route=yes --pk=id --view-path="backend" --namespace=Backend --route-group=admin
+
+
+
+FRONTEND - BudgetReports
+================================================
+php artisan
+crud:generate BudgetReports
+--fields="name#string#required"
+--route=yes
+--pk=id
+--view-path="backend"
+--namespace=Backend
+--route-group=admin
+
+php artisan crud:generate BudgetReports --fields="name#string#required" --route=yes --pk=id --view-path="backend" --namespace=Backend --route-group=admin
+
+
+FRONTEND - MenuItems
+================================================
+php artisan
+crud:generate MenuItems
+--fields="nama#string#required, url#string#required, fa_icon#string, urutan#tinyint, menu_id#string#required, parent_id#integer"
+--route=yes
+--pk=id
+--view-path="backend"
+--namespace=Backend
+--route-group=admin
+
+php artisan crud:generate MenuItems --fields="nama#string#required, url#string#required, fa_icon#string, urutan#tinyint, menu_id#string#required, parent_id#integer" --route=yes --pk=id --view-path="backend" --namespace=Backend --route-group=admin
